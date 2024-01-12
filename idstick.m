@@ -98,20 +98,20 @@ classdef idstick %komutu, idstick adlı yeni bir sınıf tanımlar.
                 ok = false; % ok değişkeninin değerini false olarak ayarlar.Açıklama:ok değişkeni, bir boolean değişkenidir.
             elseif (id.Status == "Ready") %id değişkeninin Status özelliğinin değerinin "Ready" olup olmadığını kontrol eder.id değişkeni, bir nesnenin kimliğini içerir.Status özelliği, nesnenin durumunu içerir
                
-                if (idx == 1)
+                if (idx == 1) %idx değişkeninin değerinin 1 olup olmadığını kontrol eder.idx değişkeninin değerinin 1 olup olmadığını kontrol eder.
                    
-                    id.Status = "Running";
-                    ok = true;
-                else
+                    id.Status = "Running"; % id değişkeninin Status özelliğinin değerini "Running" olarak ayarlar.id değişkeni, bir nesnenin kimliğini içerir.Status özelliği, nesnenin durumunu içerir
+                    ok = true; % ok değişkeninin değerini true olarak ayarlar.ok değişkeni, bir boolean değişkenidir.
+                else % eğer
                    
-                    ok = false;
+                    ok = false; %ok değişkeninin değerini false olarak ayarlar.ok değişkeni, bir boolean değişkenidir.
                 end % bitti
-            else
+            else % eğer
                 
-                ok = ~isempty(idx);
+                ok = ~isempty(idx); %idx değişkeninin boş olup olmadığını kontrol eder.ok değişkeni, bir boolean değişkenidir.idx değişkeni, herhangi bir veri türü olabilir.
                
-                if (idx == numel(wplist))
-                    id.Status = "Done";
+                if (idx == numel(wplist)) %idx değişkeninin wplist vektörünün boyutuna eşit olup olmadığını kontrol ederidx değişkeni, bir tamsayıdır.wplist vektörü, herhangi bir veri türü içerebilir.
+                    id.Status = "Done"; %id değişkeninin Status özelliğinin değerini "Done" olarak ayarlar.id değişkeni, bir nesnenin kimliğini içerir.Status özelliği, nesnenin durumunu içerir.
                 end % bitti
             end  % bitti
         end % bitti
